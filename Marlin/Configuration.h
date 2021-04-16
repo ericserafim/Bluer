@@ -489,20 +489,15 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-    //Bluer
- #define DEFAULT_Kp 22.2
- #define DEFAULT_Ki 1.08
- #define DEFAULT_Kd 114
+  //PID Autotune
+  #define DEFAULT_Kp 12.60
+  #define DEFAULT_Ki 0.65
+  #define DEFAULT_Kd 61.10
 
-  // MakerGear
-  //#define DEFAULT_Kp 7.0
-  //#define DEFAULT_Ki 0.1
-  //#define DEFAULT_Kd 12
-
-  // Mendel Parts V9 on 12V
-  //#define DEFAULT_Kp 63.0
-  //#define DEFAULT_Ki 2.25
-  //#define DEFAULT_Kd 440
+ //Bluer
+//  #define DEFAULT_Kp 22.2
+//  #define DEFAULT_Ki 1.08
+//  #define DEFAULT_Kd 114
 
 #endif // PIDTEMP
 
@@ -538,11 +533,16 @@
 #if ENABLED(PIDTEMPBED)
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
+
+  // PID Autotune
+  #define DEFAULT_bedKp 19.32
+  #define DEFAULT_bedKi 3.77
+  #define DEFAULT_bedKd 66.09
   
-  //Bluer
-#define DEFAULT_bedKp  66.39
-#define DEFAULT_bedKi  12.94
-#define DEFAULT_bedKd 227.14
+  //Bluer 
+  // #define DEFAULT_bedKp  66.39
+  // #define DEFAULT_bedKi  12.94
+  // #define DEFAULT_bedKd 227.14
 
 //ils15 BlueR
   // #define DEFAULT_bedKp 43.63
@@ -752,7 +752,10 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160.6, 161.6, 400.8, 412 }
+
+//Calibrated
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160.6, 161.6, 400.8, 412 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 400, 415 }
 
 /**
  * Default Max Feed Rate (mm/s)
