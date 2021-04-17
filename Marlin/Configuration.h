@@ -494,11 +494,6 @@
   #define DEFAULT_Ki 0.65
   #define DEFAULT_Kd 61.10
 
- //Bluer
-//  #define DEFAULT_Kp 22.2
-//  #define DEFAULT_Ki 1.08
-//  #define DEFAULT_Kd 114
-
 #endif // PIDTEMP
 
 //===========================================================================
@@ -539,23 +534,6 @@
   #define DEFAULT_bedKi 3.77
   #define DEFAULT_bedKd 66.09
   
-  //Bluer 
-  // #define DEFAULT_bedKp  66.39
-  // #define DEFAULT_bedKi  12.94
-  // #define DEFAULT_bedKd 227.14
-
-//ils15 BlueR
-  // #define DEFAULT_bedKp 43.63
-  // #define DEFAULT_bedKi 8.50
-  // #define DEFAULT_bedKd 149.24
-
-  //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
-  //from pidautotune
-  //#define DEFAULT_bedKp 97.1
-  //#define DEFAULT_bedKi 1.41
-  //#define DEFAULT_bedKd 1675.16
-
-  // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
