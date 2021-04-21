@@ -3239,14 +3239,14 @@
   #define USER_DESC_2 "Preheat for " PREHEAT_2_LABEL
   #define USER_GCODE_2 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND) "\nM117 Feeling hot " PREHEAT_2_LABEL " (#^_^#)"
 
-  #define USER_DESC_3 "Cooldown (Hotend and Bed)"
-  #define USER_GCODE_3 "M104 S0" "\nM140 S0" "\nM117 Feeling cold (-_-)"
+  #define USER_DESC_3 "Attach SD"
+  #define USER_GCODE_3 "M117 SD is ready" "\nM21"
 
   #define USER_DESC_4 "Eject SD"
   #define USER_GCODE_4 "M117 SD is free to be removed" "\nM22"
 
-  #define USER_DESC_5 "Attach SD"
-  #define USER_GCODE_5 "M117 SD is ready" "\nM21"
+  #define USER_DESC_5 "Cooldown (Hotend and Bed)"
+  #define USER_GCODE_5 "M104 S0" "\nM140 S0" "\nM117 Feeling cold (-_-)"
 
   #define USER_DESC_6 "Home All"
   #define USER_GCODE_6 "M117 Home ([X, Y, Z])" "\nG28"
