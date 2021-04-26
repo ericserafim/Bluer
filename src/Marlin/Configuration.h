@@ -490,9 +490,12 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   //PID Autotune
-  #define DEFAULT_Kp 12.60
-  #define DEFAULT_Ki 0.65
-  #define DEFAULT_Kd 61.10
+  // #define DEFAULT_Kp 12.60
+  // #define DEFAULT_Ki 0.65
+  // #define DEFAULT_Kd 61.10
+  #define DEFAULT_Kp 11.76
+  #define DEFAULT_Ki 0.55
+  #define DEFAULT_Kd 62.70
 
 #endif // PIDTEMP
 
