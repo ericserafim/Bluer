@@ -112,22 +112,41 @@
   #define COLOR_RATE_ALTERED      COLOR_YELLOW
 #endif
 
+// #ifndef COLOR_PRINT_TIME
+//   #define COLOR_PRINT_TIME        COLOR_AQUA
+// #endif
+
 #ifndef COLOR_PRINT_TIME
-  #define COLOR_PRINT_TIME        COLOR_AQUA
+  #define COLOR_PRINT_TIME        COLOR_YELLOW
 #endif
 
+// #ifndef COLOR_PROGRESS_FRAME
+//   #define COLOR_PROGRESS_FRAME    COLOR_WHITE
+// #endif
+// #ifndef COLOR_PROGRESS_BAR
+//   #define COLOR_PROGRESS_BAR      COLOR_BLUE
+// #endif
+// #ifndef COLOR_PROGRESS_BG
+//   #define COLOR_PROGRESS_BG       COLOR_BLACK
+// #endif
+
+//@ERIC
 #ifndef COLOR_PROGRESS_FRAME
   #define COLOR_PROGRESS_FRAME    COLOR_WHITE
 #endif
 #ifndef COLOR_PROGRESS_BAR
-  #define COLOR_PROGRESS_BAR      COLOR_BLUE
+  #define COLOR_PROGRESS_BAR      COLOR_WHITE
 #endif
 #ifndef COLOR_PROGRESS_BG
   #define COLOR_PROGRESS_BG       COLOR_BLACK
 #endif
 
+// #ifndef COLOR_STATUS_MESSAGE
+//   #define COLOR_STATUS_MESSAGE    COLOR_YELLOW
+// #endif
+
 #ifndef COLOR_STATUS_MESSAGE
-  #define COLOR_STATUS_MESSAGE    COLOR_YELLOW
+  #define COLOR_STATUS_MESSAGE    COLOR_VIVID_GREEN
 #endif
 
 #ifndef COLOR_CONTROL_ENABLED
