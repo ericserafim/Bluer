@@ -23,8 +23,8 @@
 
 #define CONFIG_EXAMPLES_DIR "Two Trees/BlueR/BlueR V3"
 
-#define BLUER_TMC2209 // Enable for the TMC2209 driver version
-#define BLUER_BLTOUCH // Enable if you want to use BLTOUCH
+//#define BLUER_TMC2209 // Enable for the TMC2209 driver version
+//#define BLUER_BLTOUCH // Enable if you want to use BLTOUCH
 //#define MKS_13      // Enable for MKS 1.3 board with soldered TMC2225 drivers
 
 /**
@@ -1129,22 +1129,22 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define K_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define U_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define V_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define W_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop.
+//#define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define K_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define U_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define V_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define W_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop.
-#define I_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define J_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define K_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define U_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define V_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define W_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define I_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define J_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define K_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define U_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define V_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define W_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MIN_PROBE_ENDSTOP_INVERTING DISABLED(BLUER_BLTOUCH) // Set to true to invert the logic of the probe.
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
@@ -1303,9 +1303,9 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-#if ENABLED(BLUER_BLTOUCH)
-  #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
-#endif
+//#if ENABLED(BLUER_BLTOUCH)
+#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+//#endif
 
 // Force the use of the probe for Z-axis homing
 //#define USE_PROBE_FOR_Z_HOMING
@@ -1516,8 +1516,8 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-//#define NOZZLE_TO_PROBE_OFFSET { 45.7, -6.2, 0 }
-#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 45.7, -6.2, 0 }
+//#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1926,8 +1926,8 @@
  * these options to restore the prior leveling state or to always enable
  * leveling immediately after G28.
  */
-//#define RESTORE_LEVELING_AFTER_G28
-#define ENABLE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28
+//#define ENABLE_LEVELING_AFTER_G28
 
 /**
  * Auto-leveling needs preheating
@@ -2070,10 +2070,10 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
-#define LCD_BED_TRAMMING
+//#define LCD_BED_TRAMMING
 
 #if ENABLED(LCD_BED_TRAMMING)
-  #define BED_TRAMMING_INSET_LFRB { 40, 40, 40, 40 } // (mm) Left, Front, Right, Back insets
+  #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
   #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at leveling points
   #define BED_TRAMMING_Z_HOP      10.0        // (mm) Z height of nozzle between leveling points
   #define BED_TRAMMING_INCLUDE_CENTER         // Move to the center after the last corner
