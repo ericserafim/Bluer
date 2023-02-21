@@ -326,6 +326,11 @@
  *** "T" Codes ***
  *
  * T0-T3 - Select an extruder (tool) by index: "T<n> F<units/min>"
+ *
+ *
+ * *************************************************************
+ * Eric Serafim - Custom commands
+ * M8383 - Bed leveling (4 corners + center). It uses the M808 loop command
  */
 
 #include "../inc/MarlinConfig.h"
@@ -1249,6 +1254,9 @@ private:
 
   static void T(const int8_t tool_index);
 
+  #if ENABLED(GCODE_MACROS)
+    static void M8383();
+  #endif
 };
 
 extern GcodeSuite gcode;
