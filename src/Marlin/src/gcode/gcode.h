@@ -1253,10 +1253,6 @@ private:
   #endif
 
   static void T(const int8_t tool_index);
-
-  #if ENABLED(GCODE_MACROS)
-    static void M8383();
-  #endif
 };
 
 extern GcodeSuite gcode;

@@ -3726,7 +3726,7 @@
  * Add G-codes M810-M819 to define and run G-code macros.
  * Macros are not saved to EEPROM.
  */
-#define GCODE_MACROS
+//#define GCODE_MACROS
 #if ENABLED(GCODE_MACROS)
   #define GCODE_MACROS_SLOTS       5  // Up to 10 may be used
   #define GCODE_MACROS_SLOT_SIZE  50  // Maximum length of a single macro
@@ -3748,9 +3748,9 @@
   #define CUSTOM_MENU_MAIN_SCRIPT_RETURN   // Return to status screen after a script
   //#define CUSTOM_MENU_MAIN_ONLY_IDLE         // Only show custom menu when the machine is idle
 
-  #define MAIN_MENU_ITEM_1_DESC "Home & UBL Info"
-  #define MAIN_MENU_ITEM_1_GCODE "G28\nG29 W"
-  #define MAIN_MENU_ITEM_1_CONFIRM          // Show a confirmation dialog before this action
+  #define MAIN_MENU_ITEM_1_DESC "Bed Leveling (4 corners)"
+  #define MAIN_MENU_ITEM_1_GCODE "G90\nG28\nM808 L\nG1 Z5\nG1 X32 Y36 F3000\nG1 Z0\nM0\nG1 Z5\nG1 X32 Y206 F3000\nG1 Z0\nM0\nG1 Z5\nG1 X202 Y206 F3000\nG1 Z0\nM0\nG1 Z5\nG1 X202 Y36 F3000\nG1 Z0\nM0\nG1 Z5\nG0 X117.5 Y117.5 F3000\nG1 Z0\nM0\nM808\nG1 Z5\nG28\nM84"
+  #define MAIN_MENU_ITEM_1_CONFIRM // Show a confirmation dialog before this action
 
   #define MAIN_MENU_ITEM_2_DESC "Preheat for " PREHEAT_1_LABEL
   #define MAIN_MENU_ITEM_2_GCODE "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)

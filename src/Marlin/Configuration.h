@@ -93,9 +93,9 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  // #if ENABLED(MKS_13)
-  //   #define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V1_3_F4
-  // #else
+   //#if ENABLED(MKS_13)
+   //  #define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V1_3_F4
+   //#else
     #define MOTHERBOARD BOARD_MKS_ROBIN_NANO
   //#endif
 #endif
